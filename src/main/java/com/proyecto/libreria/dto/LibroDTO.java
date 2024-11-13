@@ -1,4 +1,7 @@
 package com.proyecto.libreria.dto;
 
-public record LibroDTO() {
+public record LibroDTO(Long id,
+                  String titulo,
+                  Double numeroDeDescargas
+) {
 }

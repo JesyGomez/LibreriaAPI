@@ -1,5 +1,7 @@
 package com.proyecto.libreria.principal;
 
+import com.proyecto.libreria.model.Datos;
+import com.proyecto.libreria.model.DatosLibro;
 import com.proyecto.libreria.model.Libro;
 import com.proyecto.libreria.repository.LibroRepository;
 import com.proyecto.libreria.service.ConsumoAPI;
@@ -16,7 +18,7 @@ public class Principal {
     private final String URL_BASE = "https://gutendex.com/books/";
     private final String API_KEY = "";
     private ConvierteDatos conversor = new ConvierteDatos();
-//  private List<DatosSerie> datosSeries = new ArrayList<>();
+    private List<DatosLibro> datosLibro = new ArrayList<>();
     private LibroRepository repositorio;
     private List<Libro> series;
     private Optional<Libro> serieBuscada;
@@ -24,7 +26,15 @@ public class Principal {
         this.repositorio = repository;
     }
 
+    public Principal() {
+
+    }
+
     public void muestraElMenu(){
+        var json = consumoApi.obtenerDatos((URL_BASE));
+        System.out.println(json);
+        var datos = conversor.obtenerDatos(json, Datos.class);
+        System.out.println(datos);
 
         var opcion = -1;
         while (opcion != 0) {
@@ -71,7 +81,7 @@ public class Principal {
     }
 
     private void listarAutoresVivosEnDeterminadoAnio() {
-        
+
     }
 
     private void listarAutoresRegistrados() {

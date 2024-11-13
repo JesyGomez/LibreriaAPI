@@ -20,10 +20,10 @@ Crear un **Catálogo de Libros** que permita la interacción del usuario mediant
 El catálogo de libros **Librería** incluye las siguientes funcionalidades:
 
 1. **Buscar Libros por Autor**: Permite al usuario buscar todos los libros escritos por un autor específico.
-2. **Listar Todos los Libros**: Muestra todos los libros disponibles en la base de datos.
-3. **Filtrar por Género**: Permite al usuario ver una lista de libros de un género determinado.
-4. **Consultar Detalles de un Libro**: Proporciona detalles de un libro específico, como el título, autor, año de publicación, y sinopsis.
-5. **Agregar Libros a Favoritos**: Los usuarios pueden marcar libros como favoritos para acceder a ellos rápidamente en futuras consultas.
+2. **Listar Autores Registrados**: Muestra todos los autores que se encuentran en la base de datos.
+3. **Listar Libros Registrados**:  Muestra todos los libros disponibles en la base de datos.
+4. **Listar Autores vivos en un determinado año**: Proporciona información personal de cada autor.
+5. **Listar Libros por Idiomas**: Los usuarios pueden buscar libros en el idioma que deseen.
 
 ## Requisitos del Sistema
 
@@ -32,7 +32,7 @@ Para ejecutar el proyecto en tu máquina local, asegúrate de tener:
 - **Java JDK** (Yo utilicé la versión 21)
 - **IDE** recomendado: IntelliJ
 - **Dependencias**:
-    - Conexión a una base de datos (ejemplo: Postman y Postgred)
+    - Conexión a una base de datos (ejemplo: Postman y Postgres)
     - Librerías de consumo de API (puedes usar **HttpClient** o **OkHttp**)
     - Librerías de manipulación de JSON, como **Gson** o **Jackson**
 
@@ -75,20 +75,20 @@ El menú principal te ofrecerá las siguientes opciones de interacción:
 
 1. **Buscar Libros por Autor**
 2. **Listar Todos los Libros**
-3. **Filtrar por Género**
-4. **Consultar Detalles de un Libro**
-5. **Agregar Libros a Favoritos**
+3. **Listar Autores Registrados**
+4. **Listar Autores vivos en un determinado año**
+5. **Listar Libros por Idioma**
 
 ## Ejemplo de Uso
 
 ```bash
 Bienvenido a Librería - Catálogo de Libros
 
-1. Buscar Libros por Autor
-2. Listar Todos los Libros
-3. Filtrar por Género
-4. Consultar Detalles de un Libro
-5. Agregar Libros a Favoritos
-0. Salir
+1 - Buscar libro por título
+2 - Listar libros registrados
+3 - Listar autores registrados
+4 - Listar autores vivos en un determinado año
+5 - Listar libros por idioma
+0 - Salir
 
 Por favor, elige una opción: 
